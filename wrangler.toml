@@ -1,13 +1,10 @@
 name = "md2epub-premium"
-main = "public/index.html"
-compatibility_date = "2024-01-01"
+type = "javascript"
 
 [env.production]
-name = "md2epub-premium"
-
-[build]
-command = "echo 'No build step needed - static site'"
-dir = "public"
+name = "md2epub-premium-prod"
 
 [site]
 bucket = "./public"
+
+pages_build_output_dir = "public"
