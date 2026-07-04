@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD2EPUB Premium - Conversor de Markdown</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/modals.css">
+    <link rel="stylesheet" href="css/print.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MD2EPUB Premium</h1>
+            <p>Converta seus documentos Markdown em EPUB ou PDF</p>
+        </header>
+        
+        <main>
+            <section class="upload-section">
+                <h2>Carregar Arquivo</h2>
+                <div class="drop-zone" id="dropZone">
+                    <p>Arraste seu arquivo aqui ou clique para selecionar</p>
+                    <input type="file" id="fileInput" accept=".md,.markdown,.txt" hidden>
+                </div>
+            </section>
+
+            <section class="options-section">
+                <h2>Opções de Conversão</h2>
+                <div class="format-buttons">
+                    <button id="epubBtn" class="btn btn-primary">Exportar para EPUB</button>
+                    <button id="pdfBtn" class="btn btn-secondary">Exportar para PDF</button>
+                </div>
+            </section>
+
+            <section class="preview-section">
+                <h2>Visualização</h2>
+                <div id="preview" class="preview-content">
+                    <p>Seu conteúdo será exibido aqui...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Configurações</h2>
+            <form id="settingsForm">
+                <label>
+                    <input type="checkbox" id="darkMode" name="darkMode">
+                    Modo Escuro
+                </label>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/preview.js"></script>
+    <script src="js/epub-generator.js"></script>
+    <script src="js/pdf-generator.js"></script>
+    <script src="js/themes.js"></script>
+    <script src="js/theme-editor.js"></script>
+    <script src="js/pix.js"></script>
+</body>
+</html>

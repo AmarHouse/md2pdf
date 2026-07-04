@@ -1,0 +1,27 @@
+{
+  "name": "md2epub-premium",
+  "version": "1.0.0",
+  "description": "Sistema premium de conversão de Markdown para EPUB e PDF",
+  "main": "public/index.html",
+  "scripts": {
+    "serve": "npx serve public",
+    "dev": "python -m http.server 8000 --directory public",
+    "build": "echo 'Static site - no build needed'",
+    "deploy:cloudflare": "npx wrangler pages publish public"
+  },
+  "keywords": [
+    "markdown",
+    "epub",
+    "pdf",
+    "converter",
+    "conversion"
+  ],
+  "author": "AmarHouse",
+  "license": "MIT",
+  "devDependencies": {
+    "@wrangler/core": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
